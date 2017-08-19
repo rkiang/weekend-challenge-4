@@ -18,6 +18,18 @@ app.controller('EmployeeController', ['$http', function ($http) {
             self.employees = response.data;
         });
     }
+
+    // POST function to server side
+    self.postEmployees = function () {
+        $http({
+            method: 'POST',
+            url: '/employee',
+            data: self.newEmployee
+        }).then(function(response){
+            console.log(response);
+            self.getEmployees();
+        })  
+      };
     self.getEmployees();
 
 }])

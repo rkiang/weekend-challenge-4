@@ -12,14 +12,14 @@
         <form>
             <h1>Weekend Challenge 4</h1>
             <label>First Name</label>
-            <input type="text" id="firstNameInput" />
+            <input type="text" id="firstNameInput" ng-model="vm.newEmployee.first_name"/>
             <label>Last Name</label>
-            <input type="text" id="lastNameInput" />
+            <input type="text" id="lastNameInput" ng-model="vm.newEmployee.last_name"/>
             <label>Job Title</label>
-            <input type="text" id="jobTitleInput" />
+            <input type="text" id="jobTitleInput" ng-model="vm.newEmployee.job_title"/>
             <label>Annual Salary</label>
-            <input type="text" id="annualSalaryInput" />
-            <button id="submit">Submit</button>
+            <input type="text" id="annualSalaryInput" ng-model="vm.newEmployee.annual_salary"/>
+            <button id="submit" ng-click="vm.postEmployees()">Submit</button>
         </form>
     </div>
     <table>
