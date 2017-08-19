@@ -8,22 +8,22 @@
 </head>
 
 <body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
+    <h1>Weekend Challenge 4</h1>
     <div id="inputs">
         <form>
-            <h1>Weekend Challenge 4</h1>
             <label>First Name</label>
-            <input type="text" id="firstNameInput" ng-model="vm.newEmployee.first_name"/>
+            <input type="text" id="firstNameInput" ng-model="vm.newEmployee.first_name" />
             <label>Last Name</label>
-            <input type="text" id="lastNameInput" ng-model="vm.newEmployee.last_name"/>
+            <input type="text" id="lastNameInput" ng-model="vm.newEmployee.last_name" />
             <label>Job Title</label>
-            <input type="text" id="jobTitleInput" ng-model="vm.newEmployee.job_title"/>
+            <input type="text" id="jobTitleInput" ng-model="vm.newEmployee.job_title" />
             <label>Annual Salary</label>
-            <input type="text" id="annualSalaryInput" ng-model="vm.newEmployee.annual_salary"/>
+            <input type="text" id="annualSalaryInput" ng-model="vm.newEmployee.annual_salary" />
             <button id="submit" ng-click="vm.postEmployees()">Submit</button>
         </form>
     </div>
     <table>
-        <thead>
+        <thead id="tableHeading">
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -32,7 +32,7 @@
             </tr>
         </thead>
         <h3>Employee List</h3>
-        <tbody>
+        <tbody id="tableBody">
             <tr ng-repeat="employee in vm.employees">
                 <td>{{employee.first_name}}</td>
                 <td>{{employee.last_name}}</td>
@@ -42,7 +42,7 @@
         </tbody>
     </table>
 
-    <!-- <h4 ng-repeat="employee in vm.employees">>Monthly Salary Expenditures: {{employee.annual_salary}}</h4> -->
+    <h4 id="monthlySalary">Monthly Salary Expenditures: {{vm.sum}}</h4>
 </body>
 
 </html>
