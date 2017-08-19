@@ -1,0 +1,35 @@
+body {
+    background-color: rgba(108, 177, 255, 0.77);
+    font-family: 'Varela', sans-serif;
+}
+
+#tableHeading {
+    background-color: #F4F4F4;
+    text-decoration-line: underline;
+    text-decoration-color: crimson;
+    font-size: 20px;
+    font-style: italic;
+}
+
+table, th, td {
+    border: 1px solid #6b6b6b;
+    padding: 12px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 4%;
+}
+
+.annualSalary {
+    text-align: right;
+}
+
+.jobTitle {
+    text-align: center;
+}
+
+#monthlySalary {
+    margin-top: 8%;
+    font-size: 22px;
+}

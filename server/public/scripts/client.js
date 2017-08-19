@@ -25,7 +25,7 @@ app.controller('EmployeeController', ['$http', function ($http) {
                 }
                 return self.sum;
             }
-            // console.log(monthlySalary());
+            monthlySalary();
         });
     }
 
