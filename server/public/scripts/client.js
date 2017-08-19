@@ -5,7 +5,14 @@ app.controller('EmployeeController', ['$http', function ($http) {
     console.log('Employee Controller has been loaded');
     var self = this;
     self.employees = [];
-
+    // function monthlySalary() {
+    //     for (var i = 0; i < self.employees.length; i++) {
+    //         var employees = self.employees[i];
+    //         return self.employees.annual_salary;
+    //     }
+    // }
+    // console.log(monthlySalary());
+    
 
     // GET from server side
     self.getEmployees = function () {
@@ -28,6 +35,7 @@ app.controller('EmployeeController', ['$http', function ($http) {
         }).then(function(response){
             console.log(response);
             self.getEmployees();
+            self.newEmployee = {}; // clears the input field after a submission
         })  
       };
     self.getEmployees();
